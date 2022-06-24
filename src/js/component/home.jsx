@@ -27,7 +27,7 @@ const NavBar =() => {
 	return (
 <nav className="navbar navbar-expand-lg bg-light">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
+    <a className="navbar-brand" href="#">Landing Page</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -64,23 +64,51 @@ const NavBar =() => {
 	);
 }
 const Jumbotron = () => {
-	return(
-		<div class="jumbotron">
+	return(<div className="container">
+		<div class="jumbotron row">
   <h1 class="display-4">A warm welcome!</h1>
   <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
   <hr class="my-4"/>
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <a class="btn btn-primary btn-lg" href="#carouselExampleControls" role="button">Learn more</a>
   </p>
 </div>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+  <div class="carousel-item active">
+      <img src={faro} class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={camara} class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={fotoantigua} class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={paisaje} class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={portatil} class="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></div>
+
 	);
 }
 
 
 const Card =(props) => {
 	return(
-		<div class="card" style={{width: "18rem"}}>
+		<div class="card" style={{width: "20rem", marginLeft:"40px",marginTop:"10px", border:"solid 1px black"}}>
   <img src={props.image} class="card-img-top" alt="..."/>
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
